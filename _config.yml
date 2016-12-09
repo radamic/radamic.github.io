@@ -10,10 +10,10 @@ url: "http://www.radamic.com" # the base hostname & protocol for your site
 social:
   twitter: https://twitter.com/radamicsecurity
   github: https://github.com/orgs/radamic
-  linkedin-square: https://linkedin.com/in/<username>
-  facebook-official: https://facebook.com/<username>
-  google-plus-square: https://plus.google.com/u/0/+<username>
-  #email: /contact/
+  #linkedin-square: https://linkedin.com/in/<username>
+  #facebook-official: https://facebook.com/<username>
+  #google-plus-square: https://plus.google.com/u/0/+<username>
+  email: /contact/
   #flickr:
   #instagram:
   #youtube-square:
