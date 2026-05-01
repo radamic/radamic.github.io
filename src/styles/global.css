@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --color-bg: #191c23;
+  --color-bg-elev: #1f232c;
+  --color-border: #2a2f3a;
+  --color-fg: #eceff4;
+  --color-fg-dim: #9099a8;
+  --color-accent: #be6069;
+  --color-accent-dim: #8a4750;
+  --color-accent-bright: #d27a83;
+  --color-warn: #ebcb8b;
+}
+
+html {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-mono);
+  font-feature-settings: "ss01", "cv01";
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top, rgba(190, 96, 105, 0.08), transparent 60%),
+    var(--color-bg);
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-fg);
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.cursor::after {
+  content: "_";
+  color: var(--color-accent);
+  margin-left: 0.15em;
+  animation: blink 1s steps(1) infinite;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+}

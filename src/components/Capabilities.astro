@@ -1,0 +1,65 @@
+---
+const capabilities = [
+  {
+    id: "red-team",
+    title: "red team engagements",
+    body: "end-to-end adversary emulation against your real environment. objective-driven operations, stealthy tradecraft, and reporting written for the people who have to remediate.",
+  },
+  {
+    id: "pentest",
+    title: "advanced pentesting",
+    body: "modern methods, custom tooling, deep exploit chains. internal, external, web, mobile, and cloud surfaces. no checklist scans dressed up as findings.",
+  },
+  {
+    id: "exploit-dev",
+    title: "exploit development & research",
+    body: "0-day discovery, fuzzing, n-day weaponisation, and proof-of-concept authorship. focused on the bugs that change a posture, not the ones a scanner already catches.",
+  },
+  {
+    id: "tooling",
+    title: "offensive tooling",
+    body: "purpose-built implants, payloads, C2 channels, and reconnaissance pipelines. we build what we wish we had on engagement, then we use it.",
+  },
+  {
+    id: "infrastructure",
+    title: "operational infrastructure",
+    body: "infrastructure-as-code for redirectors, C2, lab environments, and operator workstations. opsec-aware deployment patterns and reproducible operations.",
+  },
+  {
+    id: "training",
+    title: "training & enablement",
+    body: "internal study material, certification preparation environments, and curated playbooks. used to onboard our own people and offered to clients on request.",
+  },
+];
+---
+
+<section id="capabilities" class="border-b border-[var(--color-border)] bg-[var(--color-bg-elev)]">
+  <div class="max-w-6xl mx-auto px-6 py-20 sm:py-28">
+    <div class="text-[var(--color-accent-dim)] text-xs tracking-wider uppercase mb-3">
+      // 02 - capabilities
+    </div>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-3 text-[var(--color-fg)]">
+      what we do
+    </h2>
+    <p class="text-[var(--color-fg-dim)] mb-12 max-w-2xl">
+      a high-level view of our service surface. specifics, sample reports,
+      and tooling demos are available under engagement.
+    </p>
+
+    <div class="grid sm:grid-cols-2 gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
+      {capabilities.map((c) => (
+        <article class="bg-[var(--color-bg-elev)] p-6 sm:p-8 hover:bg-[var(--color-bg)] transition group">
+          <div class="text-[var(--color-accent)] text-xs mb-3 font-medium">
+            ./{c.id}
+          </div>
+          <h3 class="text-lg font-semibold text-[var(--color-fg)] mb-3 group-hover:text-[var(--color-accent)] transition">
+            {c.title}
+          </h3>
+          <p class="text-sm text-[var(--color-fg-dim)] leading-relaxed">
+            {c.body}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
