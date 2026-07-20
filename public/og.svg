@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#cc757c" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#cc757c" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#191c23"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="16" y="16" width="1168" height="598" fill="none" stroke="#2a2f3a" stroke-width="1"/>
+
+  <g font-family="JetBrainsMono Nerd Font Mono, monospace">
+    <text x="80" y="150" fill="#9099a8" font-size="26" font-weight="400" letter-spacing="4">// elite red team operations</text>
+
+    <text x="76" y="330" fill="#cc757c" font-size="150" font-weight="700" letter-spacing="-2">radamic</text>
+    <rect x="820" y="292" width="46" height="14" fill="#cc757c"/>
+
+    <text x="80" y="408" fill="#eceff4" font-size="27" font-weight="400">adversary emulation / exploit development / security research</text>
+
+    <text x="80" y="560" fill="#cc757c" font-size="28" font-weight="500">~/radamic $</text>
+    <text x="1120" y="560" fill="#9099a8" font-size="26" font-weight="400" text-anchor="end">radamic.com</text>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+radamic - PGP public key
+=========================
+
+Replace this placeholder with the ASCII-armored public key before launch:
+
+    gpg --armor --export <FINGERPRINT> > public/pgp.txt
+
+Then publish the 40-character fingerprint in the site footer and in
+/.well-known/security.txt (Encryption points here).
+
+Fingerprint: [ complete before launch ]

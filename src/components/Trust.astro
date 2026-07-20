@@ -1,0 +1,58 @@
+---
+const roe = [
+  "we operate only under signed, written authorization and an explicitly agreed scope.",
+  "we never target systems, data, personnel, or third parties outside that scope.",
+  "client data and findings are handled on a need-to-know basis, encrypted at rest and in transit, and destroyed per an agreed retention schedule.",
+  "vulnerabilities found in third-party products are handled under coordinated, responsible disclosure.",
+  "we will decline, pause, or terminate any work that becomes unlawful or falls outside the agreed rules of engagement.",
+];
+
+// Fields marked [ complete ] must be filled with the real legal facts before launch.
+const facts = [
+  { k: "legal entity", v: "[ complete: registered company name ]" },
+  { k: "jurisdiction", v: "[ complete: country of registration ]" },
+  { k: "liability", v: "professional indemnity cover - evidence on request" },
+  { k: "accreditations", v: "[ complete: CREST / OSCP / OSCE / etc. ]" },
+  { k: "methodology", v: "MITRE ATT&CK / PTES / OSSTMM / TIBER-EU / CBEST aligned" },
+  { k: "data handling", v: "encrypted, minimized, destroyed on schedule" },
+];
+---
+
+<section id="trust" class="border-b border-[var(--color-border)] bg-[var(--color-bg-elev)]">
+  <div class="max-w-6xl mx-auto px-6 py-20 sm:py-28">
+    <div class="text-[var(--color-accent)] text-xs tracking-wider uppercase mb-3">
+      // 04 - trust
+    </div>
+    <h2 class="text-2xl sm:text-3xl font-bold mb-3 text-[var(--color-fg)]">
+      rules of engagement
+    </h2>
+    <p class="text-[var(--color-fg-dim)] mb-12 max-w-2xl">
+      offensive work demands more trust than most services, not less. how we
+      operate is deliberately unambiguous - procurement, legal, and security
+      teams should be able to sign off without guessing.
+    </p>
+
+    <div class="grid lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2">
+        <div class="text-[var(--color-accent)] text-xs mb-4 font-medium">$ cat ./rules-of-engagement</div>
+        <ul class="space-y-4 text-[var(--color-fg-dim)] leading-relaxed">
+          {roe.map((r) => (
+            <li class="flex gap-3">
+              <span class="text-[var(--color-accent)] select-none">-</span>
+              <span>{r}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="border-l border-[var(--color-border)] pl-6 space-y-4 text-sm">
+        {facts.map((f) => (
+          <div>
+            <div class="text-[var(--color-accent)] mb-1">$ {f.k}</div>
+            <div class="text-[var(--color-fg-dim)]">{f.v}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

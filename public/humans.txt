@@ -1,0 +1,10 @@
+/* team */
+radamic - offensive security
+developer: prodrom3
+contact: contact@radamic.com
+
+/* site */
+built with: astro, tailwindcss
+hosting: github pages (static)
+trackers: none
+analytics: none

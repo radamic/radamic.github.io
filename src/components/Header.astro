@@ -1,17 +1,49 @@
 ---
+const links = [
+  { href: "#about", label: "about" },
+  { href: "#capabilities", label: "capabilities" },
+  { href: "#work", label: "work" },
+  { href: "#trust", label: "trust" },
+  { href: "#contact", label: "contact" },
+];
 ---
 
-<header class="border-b border-[var(--color-border)] sticky top-0 z-30 backdrop-blur-md bg-[rgba(10,10,11,0.7)]">
+<header class="border-b border-[var(--color-border)] sticky top-0 z-30 backdrop-blur-md bg-[rgba(25,28,35,0.8)]">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between text-sm">
     <a href="#top" class="flex items-center gap-2 group">
       <span class="text-[var(--color-accent)] font-bold tracking-widest">~/radamic</span>
       <span class="text-[var(--color-fg-dim)] group-hover:text-[var(--color-fg)] transition">$</span>
     </a>
-    <nav class="hidden sm:flex items-center gap-6 text-[var(--color-fg-dim)]">
-      <a href="#about" class="hover:text-[var(--color-accent)] transition">about</a>
-      <a href="#capabilities" class="hover:text-[var(--color-accent)] transition">capabilities</a>
-      <a href="#work" class="hover:text-[var(--color-accent)] transition">work</a>
-      <a href="#contact" class="hover:text-[var(--color-accent)] transition">contact</a>
+
+    <!-- desktop nav -->
+    <nav aria-label="primary" class="hidden sm:flex items-center gap-6 text-[var(--color-fg-dim)]">
+      {links.map((l) => (
+        <a href={l.href} class="hover:text-[var(--color-accent)] transition">{l.label}</a>
+      ))}
     </nav>
+
+    <!-- mobile nav (JS-free disclosure) -->
+    <details class="sm:hidden relative group">
+      <summary
+        class="list-none cursor-pointer text-[var(--color-fg-dim)] hover:text-[var(--color-accent)] transition select-none"
+        aria-label="toggle navigation menu"
+      >
+        <span class="group-open:hidden">$ menu</span>
+        <span class="hidden group-open:inline">$ close</span>
+      </summary>
+      <nav
+        aria-label="primary mobile"
+        class="absolute right-0 mt-3 w-44 flex flex-col border border-[var(--color-border)] bg-[var(--color-bg-elev)] py-2 shadow-lg"
+      >
+        {links.map((l) => (
+          <a
+            href={l.href}
+            class="px-4 py-2 text-[var(--color-fg-dim)] hover:text-[var(--color-accent)] hover:bg-[var(--color-bg)] transition"
+          >
+            {l.label}
+          </a>
+        ))}
+      </nav>
+    </details>
   </div>
 </header>

@@ -1,0 +1,11 @@
+# radamic security contact - https://www.rfc-editor.org/rfc/rfc9116
+# NOTE: refresh "Expires" before the date below; sign this file with the radamic PGP key for production.
+
+Contact: mailto:security@radamic.com
+Contact: mailto:contact@radamic.com
+Contact: https://radamic.com/#contact
+Expires: 2027-01-01T00:00:00.000Z
+Encryption: https://radamic.com/pgp.txt
+Preferred-Languages: en
+Canonical: https://radamic.com/.well-known/security.txt
+Policy: https://radamic.com/#trust

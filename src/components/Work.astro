@@ -1,6 +1,12 @@
 ---
 const work = [
   {
+    tag: "case study - anonymized",
+    title: "full-scope red team, regulated financial-sector target",
+    body: "objective: prove whether a determined adversary could reach and exfiltrate crown-jewel data. outcome: domain compromise inside the first week via a chained misconfiguration and a custom loader; simulated exfiltration held long enough to demonstrate the monitoring gap; a follow-on purple phase measurably lifted the client's ATT&CK detection coverage. timeline, scope, and metrics shared under NDA.",
+    stack: ["initial access", "active directory", "purple"],
+  },
+  {
     tag: "engagement type",
     title: "objective-driven red team",
     body: "scoped to a real outcome - data exfiltration, domain compromise, ransomware simulation, or detection validation. measured against your blue team, not a generic baseline.",
@@ -29,7 +35,7 @@ const work = [
 
 <section id="work" class="border-b border-[var(--color-border)]">
   <div class="max-w-6xl mx-auto px-6 py-20 sm:py-28">
-    <div class="text-[var(--color-accent-dim)] text-xs tracking-wider uppercase mb-3">
+    <div class="text-[var(--color-accent)] text-xs tracking-wider uppercase mb-3">
       // 03 - selected work
     </div>
     <h2 class="text-2xl sm:text-3xl font-bold mb-3 text-[var(--color-fg)]">
@@ -44,7 +50,7 @@ const work = [
       {work.map((w, i) => (
         <article class="border border-[var(--color-border)] bg-[var(--color-bg-elev)] p-6 sm:p-8 hover:border-[var(--color-accent-dim)] transition group">
           <div class="flex flex-wrap items-center gap-3 text-xs mb-4">
-            <span class="text-[var(--color-fg)] bg-[var(--color-accent)] px-2 py-0.5 font-medium">
+            <span class="text-[var(--color-bg)] bg-[var(--color-accent)] px-2 py-0.5 font-medium">
               {String(i + 1).padStart(2, "0")}
             </span>
             <span class="text-[var(--color-fg-dim)] uppercase tracking-wider">{w.tag}</span>
