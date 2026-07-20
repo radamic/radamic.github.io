@@ -79,6 +79,12 @@ summary::-webkit-details-marker {
   animation: blink 1s steps(1) infinite;
 }
 
+/* ASCII art must not get ligatures / stylistic sets, or box chars mangle */
+.ascii {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0, "dlig" 0, "ss01" 0, "cv01" 0;
+}
+
 .grid-bg {
   background-image:
     linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
