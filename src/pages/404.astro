@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="radamic // 404 not found" description="page not found.">
+  <main id="main" tabindex="-1" class="min-h-screen grid-bg flex items-center">
+    <div class="max-w-6xl mx-auto px-6 py-24 w-full">
+      <a href="/" class="inline-flex items-center gap-2 group mb-12 text-sm">
+        <span class="text-[var(--color-accent)] font-bold tracking-widest">~/radamic</span>
+        <span class="text-[var(--color-fg-dim)] group-hover:text-[var(--color-fg)] transition">$</span>
+      </a>
+
+      <div class="text-[var(--color-accent)] text-xs tracking-wider uppercase mb-3">
+        // 404
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-bold mb-6 text-[var(--color-fg)]">
+        not found
+      </h1>
+
+      <pre class="text-xs sm:text-sm text-[var(--color-fg-dim)] mb-8 leading-relaxed overflow-x-auto"><span class="text-[var(--color-accent)]">$</span> cat ./404
+cat: ./404: no such file or directory</pre>
+
+      <p class="text-[var(--color-fg-dim)] max-w-2xl text-base sm:text-lg leading-relaxed mb-10">
+        the page you requested does not exist.
+      </p>
+
+      <a
+        href="/"
+        class="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-6 py-3 hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)] transition text-sm"
+      >
+        $ cd /
+      </a>
+    </div>
+  </main>
+</Layout>
