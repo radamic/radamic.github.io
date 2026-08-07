@@ -44,6 +44,10 @@ const orgSchema = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- security policy (meta-enforceable subset; frame-ancestors/HSTS need real HTTP headers). -->
+    <!-- font-src includes data: because the build inlines a small JetBrains Mono unicode-range subset as a data: woff2. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'none'; base-uri 'self'; form-action 'none'; object-src 'none'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
